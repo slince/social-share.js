@@ -1,0 +1,23 @@
+{
+  "name": "social-share-button",
+  "version": "1.0.0",
+  "description": "Help to create social share button",
+  "main": "dist/social-share.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slince/social-share.js.git"
+  },
+  "keywords": [
+    "social",
+    "share",
+    "sns"
+  ],
+  "author": "Taosikai <taosikai@yeah.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
+}

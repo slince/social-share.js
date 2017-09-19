@@ -1,12 +1,11 @@
 'use strict';
 
-import $ from 'jQuery';
+import $ from 'jquery';
 
 class SocialShare {
-    constructor: (element, options) => {
+    constructor(element, options) {
         this.container = element;
         options = $.extend({
-            hello: 'world'
         }, options);
     }
 }

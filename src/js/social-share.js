@@ -3,6 +3,8 @@
 //导入css样式文件
 import '../scss/social-share.scss';
 import $ from 'jquery';
+
+//导入Provider
 import Baidu from  './providers/baidu.js';
 import Weibo from  './providers/weibo.js';
 import QQ from  './providers/qq.js';
@@ -14,6 +16,10 @@ import Twitter from  './providers/twitter.js';
 
 class SocialShare {
 
+    /**
+     * @param {String|DOMNode|jQuery}element
+     * @param {Object} options
+     */
     constructor(element, options) {
         this.container = $(element);
 
@@ -39,23 +45,43 @@ class SocialShare {
         this._createProviders();
     }
 
-    get(alias){
+    /**
+     * 获取provider对象
+     *
+     * @param {String} alias
+     * @returns {null}
+     */
+    getProvider(alias){
         return typeof this.providers[alias] === 'undefined' ? null :this.providers[alias];
     }
 
+    /**
+     * 创建providers
+     *
+     * @private
+     */
     _createProviders(){
         this.providers = {};
         for (const provider in this.options ) {
             if (typeof this.providerClassMap[provider] === 'undefined') {
                 continue;
             }
-            const instance =  this._createProvider(provider, this.options[provider]);
+            const options = SocialShare._mergeOptions(this.options[provider]);
+            const instance = new this.providerClassMap[provider](options);
+
             this.providers[provider] = instance;
             this.container.append(instance.getElement());
         }
     }
 
-    _createProvider(provider, options){
+    /**
+     * 合并provider的options
+     *
+     * @param {Object} options
+     * @returns {Object}
+     * @private
+     */
+    static _mergeOptions(options){
         if (!options.title) {
             options.title = document.title;
         }
@@ -66,8 +92,7 @@ class SocialShare {
             options.summary = options.title;
         }
         options.url = encodeURIComponent(options.url);
-        const providerClass = this.providerClassMap[provider];
-        return new providerClass(options);
+        return options;
     }
 }
 

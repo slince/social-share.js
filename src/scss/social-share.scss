@@ -15,6 +15,8 @@ $twitterColor: #00acee;
 //贴吧主色
 $tiebaColor: #3285ff;
 
+//暗色
+$darkColor: #333;
 
 .social-share-button{
 
@@ -58,7 +60,6 @@ $tiebaColor: #3285ff;
 .social-share-button-square{
   .social-share-icon{
     border: 1px solid $facebookColor;
-    text-decoration: none;
     font-size: 18px;
     width: 24px;
     height: 24px;
@@ -136,3 +137,28 @@ $tiebaColor: #3285ff;
   }
 }
 
+/*------------------------------------
+  方形暗色主题
+------------------------------------*/
+.social-share-button-dark-square{
+  @extend .social-share-button-square;
+  .social-share-icon{
+    color: $darkColor;
+    border-color: $darkColor;
+
+    &:hover{
+      background-color: $darkColor;
+      color: #fff;
+    }
+  }
+}
+
+/*------------------------------------
+  圆形暗色主题
+------------------------------------*/
+.social-share-button-dark-circle{
+  @extend .social-share-button-dark-square;
+  .social-share-icon{
+    border-radius: 50%;
+  }
+}

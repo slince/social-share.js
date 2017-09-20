@@ -3,6 +3,7 @@
 import Provider from '../provider.js';
 
 class Baidu extends Provider {
+
     constructor(options){
         if (!options.desc) {
             options.desc = options.title;

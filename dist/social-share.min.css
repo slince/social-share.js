@@ -32,9 +32,8 @@
 /*------------------------------------
   方形主题
 ------------------------------------*/
-.social-share-button-square .social-share-icon, .social-share-button-circle .social-share-icon {
+.social-share-button-square .social-share-icon, .social-share-button-circle .social-share-icon, .social-share-button-dark-square .social-share-icon, .social-share-button-dark-circle .social-share-icon {
   border: 1px solid #44619D;
-  text-decoration: none;
   font-size: 18px;
   width: 24px;
   height: 24px;
@@ -44,51 +43,51 @@
   transition: background 0.5s ease;
   border-radius: 15%; }
 
-.social-share-button-square .social-share-icon-facebook, .social-share-button-circle .social-share-icon-facebook {
+.social-share-button-square .social-share-icon-facebook, .social-share-button-circle .social-share-icon-facebook, .social-share-button-dark-square .social-share-icon-facebook, .social-share-button-dark-circle .social-share-icon-facebook {
   color: #44619D; }
-  .social-share-button-square .social-share-icon-facebook:hover, .social-share-button-circle .social-share-icon-facebook:hover {
+  .social-share-button-square .social-share-icon-facebook:hover, .social-share-button-circle .social-share-icon-facebook:hover, .social-share-button-dark-square .social-share-icon-facebook:hover, .social-share-button-dark-circle .social-share-icon-facebook:hover {
     color: #fff;
     background-color: #44619D; }
 
-.social-share-button-square .social-share-icon-tieba, .social-share-button-circle .social-share-icon-tieba {
+.social-share-button-square .social-share-icon-tieba, .social-share-button-circle .social-share-icon-tieba, .social-share-button-dark-square .social-share-icon-tieba, .social-share-button-dark-circle .social-share-icon-tieba {
   color: #3285ff;
   border-color: #3285ff; }
-  .social-share-button-square .social-share-icon-tieba:hover, .social-share-button-circle .social-share-icon-tieba:hover {
+  .social-share-button-square .social-share-icon-tieba:hover, .social-share-button-circle .social-share-icon-tieba:hover, .social-share-button-dark-square .social-share-icon-tieba:hover, .social-share-button-dark-circle .social-share-icon-tieba:hover {
     color: #fff;
     background-color: #3285ff; }
 
-.social-share-button-square .social-share-icon-weibo, .social-share-button-circle .social-share-icon-weibo {
+.social-share-button-square .social-share-icon-weibo, .social-share-button-circle .social-share-icon-weibo, .social-share-button-dark-square .social-share-icon-weibo, .social-share-button-dark-circle .social-share-icon-weibo {
   color: #d72a2b;
   border-color: #d72a2b; }
-  .social-share-button-square .social-share-icon-weibo:hover, .social-share-button-circle .social-share-icon-weibo:hover {
+  .social-share-button-square .social-share-icon-weibo:hover, .social-share-button-circle .social-share-icon-weibo:hover, .social-share-button-dark-square .social-share-icon-weibo:hover, .social-share-button-dark-circle .social-share-icon-weibo:hover {
     color: #fff;
     background-color: #d72a2b; }
 
-.social-share-button-square .social-share-icon-qq, .social-share-button-circle .social-share-icon-qq {
+.social-share-button-square .social-share-icon-qq, .social-share-button-circle .social-share-icon-qq, .social-share-button-dark-square .social-share-icon-qq, .social-share-button-dark-circle .social-share-icon-qq {
   color: #3299dc;
   border-color: #3299dc; }
-  .social-share-button-square .social-share-icon-qq:hover, .social-share-button-circle .social-share-icon-qq:hover {
+  .social-share-button-square .social-share-icon-qq:hover, .social-share-button-circle .social-share-icon-qq:hover, .social-share-button-dark-square .social-share-icon-qq:hover, .social-share-button-dark-circle .social-share-icon-qq:hover {
     color: #fff;
     background-color: #3299dc; }
 
-.social-share-button-square .social-share-icon-qzone, .social-share-button-circle .social-share-icon-qzone {
+.social-share-button-square .social-share-icon-qzone, .social-share-button-circle .social-share-icon-qzone, .social-share-button-dark-square .social-share-icon-qzone, .social-share-button-dark-circle .social-share-icon-qzone {
   color: #f2c141;
   border-color: #f2c141; }
-  .social-share-button-square .social-share-icon-qzone:hover, .social-share-button-circle .social-share-icon-qzone:hover {
+  .social-share-button-square .social-share-icon-qzone:hover, .social-share-button-circle .social-share-icon-qzone:hover, .social-share-button-dark-square .social-share-icon-qzone:hover, .social-share-button-dark-circle .social-share-icon-qzone:hover {
     color: #fff;
     background-color: #f2c141; }
 
-.social-share-button-square .social-share-icon-douban, .social-share-button-circle .social-share-icon-douban {
+.social-share-button-square .social-share-icon-douban, .social-share-button-circle .social-share-icon-douban, .social-share-button-dark-square .social-share-icon-douban, .social-share-button-dark-circle .social-share-icon-douban {
   color: #319867;
   border-color: #319867; }
-  .social-share-button-square .social-share-icon-douban:hover, .social-share-button-circle .social-share-icon-douban:hover {
+  .social-share-button-square .social-share-icon-douban:hover, .social-share-button-circle .social-share-icon-douban:hover, .social-share-button-dark-square .social-share-icon-douban:hover, .social-share-button-dark-circle .social-share-icon-douban:hover {
     color: #fff;
     background-color: #319867; }
 
-.social-share-button-square .social-share-icon-twitter, .social-share-button-circle .social-share-icon-twitter {
+.social-share-button-square .social-share-icon-twitter, .social-share-button-circle .social-share-icon-twitter, .social-share-button-dark-square .social-share-icon-twitter, .social-share-button-dark-circle .social-share-icon-twitter {
   color: #00acee;
   border-color: #00acee; }
-  .social-share-button-square .social-share-icon-twitter:hover, .social-share-button-circle .social-share-icon-twitter:hover {
+  .social-share-button-square .social-share-icon-twitter:hover, .social-share-button-circle .social-share-icon-twitter:hover, .social-share-button-dark-square .social-share-icon-twitter:hover, .social-share-button-dark-circle .social-share-icon-twitter:hover {
     color: #fff;
     background-color: #00acee; }
 
@@ -96,6 +95,22 @@
   圆形主题
 ------------------------------------*/
 .social-share-button-circle .social-share-icon {
+  border-radius: 50%; }
+
+/*------------------------------------
+  方形暗色主题
+------------------------------------*/
+.social-share-button-dark-square .social-share-icon, .social-share-button-dark-circle .social-share-icon {
+  color: #333;
+  border-color: #333; }
+  .social-share-button-dark-square .social-share-icon:hover, .social-share-button-dark-circle .social-share-icon:hover {
+    background-color: #333;
+    color: #fff; }
+
+/*------------------------------------
+  圆形暗色主题
+------------------------------------*/
+.social-share-button-dark-circle .social-share-icon {
   border-radius: 50%; }
 
 /*# sourceMappingURL=social-share.min.css.map*/

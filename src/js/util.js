@@ -1,5 +1,13 @@
 'use strict';
 
+/**
+ * 打开新窗口
+ *
+ * @param {String} url 链接
+ * @param {Number} width 窗口宽度
+ * @param {Number} height 窗口高度
+ * @returns {Window}
+ */
 export function openWin(url, width, height) {
     let win, left, top, opts;
     if (width && height) {

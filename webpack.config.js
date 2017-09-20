@@ -38,7 +38,7 @@ module.exports = {
                     {
                         loader:  'babel-loader?cacheDirectory=true',
                         options: {
-                            presets: ['es2015'],
+                            presets: ['env'],
                             plugins: ['transform-runtime']
                         }
                     }

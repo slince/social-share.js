@@ -1959,4 +1959,3 @@ function openWin(url, width, height) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=social-share.min.js.map

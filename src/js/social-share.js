@@ -1,13 +1,17 @@
 'use strict';
 
+//导入css样式文件
+import '../scss/social-share.scss';
 import $ from 'jquery';
 import Facebook from  './providers/facebook.js';
+
 
 class SocialShare {
 
     constructor(element, options) {
-        this.container = element;
+        this.container = $(element);
         this.options = $.extend({
+
         }, options);
         this.providerClassMap = {
             'facebook': Facebook
@@ -36,9 +40,9 @@ class SocialShare {
             options.url = location.href;
         }
         const providerClass = this.providerClassMap[provider];
-        const instance = new providerClass(options);
+        const instance = new Facebook(options);
         return instance;
     }
 }
 
-export default SocialShare;
+module.exports = SocialShare;

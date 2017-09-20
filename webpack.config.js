@@ -1,19 +1,26 @@
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+    filename: "[name].css"
+});
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src/social-share.js'),
+    entry: {
+        'social-share.min': path.resolve(__dirname, 'src/js/social-share.js'),
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'social-share.min.js',
+        filename: '[name].js',
+        library: 'SocialShare',
         libraryTarget: 'umd'
     },
     externals: {
-        jquery: 'window.jQuery'
+        jquery: 'jQuery'
     },
+    devtool: 'source-map',
     module: {
         rules: [
-            { test: /\.css/, use: 'style-loader!css-loader' },
-            { test: /\.scss/, use: 'style-loader!css-loader!sass-loader' },
             {
                 test: /\.js$/,
                 enforce: "pre",
@@ -25,7 +32,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(js|jsx)/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -36,8 +43,26 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.scss$/,
+                use: extractSass.extract([ 'css-loader', 'sass-loader' ])
+            },
+            {
+                test: /\.(gif|jpg|png|woff|svg|eot|ttf)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
+                    }
+                ]
             }
         ]
-    }
+    },
 
+    plugins: [
+        extractSass
+    ]
 };

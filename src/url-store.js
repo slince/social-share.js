@@ -1,4 +1,6 @@
-SocialShare.Networks = [
+import $ from 'jquery';
+
+const networks = [
     {
         name: 'Facebook',
         class: 'facebook',
@@ -175,3 +177,5 @@ SocialShare.Networks = [
         url: 'http://service.weibo.com/share/share.php?url={url}&appkey=&title={text}&pic=&ralateUid=',
     }
 ];
+
+export default networks;

@@ -4,7 +4,8 @@
   "description": "Help to create social share button",
   "main": "dist/social-share.js",
   "scripts": {
-    "build": "webpack"
+    "build": "./node_modules/.bin/webpack --config=webpack.config.js --display-error-details -p",
+    "watch": "./node_modules/.bin/webpack --config=webpack.config.js --watch -p"
   },
   "repository": {
     "type": "git",
@@ -20,20 +21,11 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-plugin-syntax-async-functions": "^6.13.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-es2015-classes": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-es2015-loose": "^8.0.0",
-    "babel-preset-es2015-without-strict": "0.0.4",
-    "babel-preset-es2017": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.7",
+    "jshint": "^2.9.5",
+    "jshint-loader": "^0.8.4",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "webpack": "^3.6.0"

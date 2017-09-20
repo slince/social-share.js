@@ -7,6 +7,9 @@ class Baidu extends Provider {
         if (!options.desc) {
             options.desc = options.title;
         }
+        if (!options.comment) {
+            options.comment = options.title;
+        }
         super(options);
     }
 
@@ -15,7 +18,7 @@ class Baidu extends Provider {
     }
 
     _getUrlTemplate(){
-        return 'http://tieba.baidu.com/f/commit/share/openShareApi?url={url}&title={title}&desc={desc}&comment={desc}';
+        return 'http://tieba.baidu.com/f/commit/share/openShareApi?url={url}&title={title}&desc={desc}&comment={comment}';
     }
 }
 

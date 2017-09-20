@@ -24,7 +24,7 @@ class Provider {
     }
 
     _createDomNode(){
-        let html = `<a href="javascript:void(0)" class="social-share-button social-share-${this.getName()}"><i class="${this.options.iconClass}"></i> </a>`;
+        let html = `<a href="javascript:void(0)" class="${this.options.iconClass}"></a>`;
         const element = $(html);
         this._bindEvents(element);
         return element;
@@ -32,8 +32,9 @@ class Provider {
 
     _createUrl(){
         let urlTemplate = this._getUrlTemplate();
-        return urlTemplate.replace(/\{\{(\w+)\}\}/g, function (matches) {
-            const parameter = matches.slice(2, -2);
+        console.log(this.options);
+        return urlTemplate.replace(/\{(\w+)\}/g, (matches) => {
+            const parameter = matches.slice(1, -1);
             if (typeof this.options[parameter] !== 'undefined') {
                 return this.options[parameter]
             }

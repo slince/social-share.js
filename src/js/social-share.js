@@ -16,9 +16,7 @@ class SocialShare {
 
     constructor(element, options) {
         this.container = $(element);
-        this.options = $.extend({
 
-        }, options);
         this.providerClassMap = {
             'baidu': Baidu,
             'weibo': Weibo,
@@ -26,7 +24,18 @@ class SocialShare {
             'qzone': QZone,
             'douban': Douban,
             'facebook': Facebook,
+            'twitter': Twitter
         };
+
+        this.options = $.extend({
+            theme: false
+        }, options);
+
+        let className = 'social-share-button';
+        if (this.options.theme) {
+            className += ` social-share-button-${this.options.theme}`;
+        }
+        this.container.addClass(className);
         this._createProviders();
     }
 
@@ -37,6 +46,9 @@ class SocialShare {
     _createProviders(){
         this.providers = {};
         for (const provider in this.options ) {
+            if (typeof this.providerClassMap[provider] === 'undefined') {
+                continue;
+            }
             const instance =  this._createProvider(provider, this.options[provider]);
             this.providers[provider] = instance;
             this.container.append(instance.getElement());
@@ -50,9 +62,12 @@ class SocialShare {
         if (!options.url) {
             options.url = location.href;
         }
+        if (!options.summary) {
+            options.summary = options.title;
+        }
+        options.url = encodeURIComponent(options.url);
         const providerClass = this.providerClassMap[provider];
-        const instance = new providerClass(options);
-        return instance;
+        return new providerClass(options);
     }
 }
 

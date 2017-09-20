@@ -14,7 +14,7 @@ class Facebook extends Provider {
     }
 
     _getUrlTemplate(){
-        return 'https://www.facebook.com/sharer.php?s=100&p[url]={url}&p[images][0]={img}&p[title]={title}&p[summary]={summary}';
+        return 'https://www.facebook.com/sharer.php?s=100&p[url]={url}&p[images][0]={image}&p[title]={title}&p[summary]={summary}';
     }
 }
 

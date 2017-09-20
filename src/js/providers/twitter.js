@@ -9,7 +9,7 @@ class Twitter extends Provider {
     }
 
     _getUrlTemplate(){
-        return 'https://twitter.com/intent/tweet?text={title}&url={url}&via={origin}';
+        return 'https://twitter.com/intent/tweet?url={url}&text={title}&via={via}&hashtags={hashtags}';
     }
 }
 

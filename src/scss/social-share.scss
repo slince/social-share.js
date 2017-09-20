@@ -1,8 +1,138 @@
 @charset "UTF-8";
 
-a.social-share-button{
-  text-decoration: none;
+//Facebook主色
+$facebookColor: #44619D;
+//微博主色
+$weiboColor: #d72a2b;
+//QQ主色
+$QQColor: #3299dc;
+//QZone主色
+$qZoneColor: #f2c141;
+//豆瓣主色
+$doubanColor: #319867;
+//twitter主色
+$twitterColor: #00acee;
+//贴吧主色
+$tiebaColor: #3285ff;
+
+
+.social-share-button{
+
   .social-share-icon{
+    text-decoration: none;
     font-size: 24px;
+    color: $facebookColor;
+    margin-right: 5px;
+  }
+
+  .social-share-icon-facebook{
+    color: $facebookColor;
+    &:hover{
+      color: #fff;
+      background-color: $facebookColor;
+    }
+  }
+  .social-share-icon-tieba{
+    color: $tiebaColor;
+  }
+  .social-share-icon-weibo{
+    color: $weiboColor;
+  }
+  .social-share-icon-qq{
+    color: $QQColor;
+  }
+  .social-share-icon-qzone{
+    color: $qZoneColor;
+  }
+  .social-share-icon-douban{
+    color: $doubanColor;
+  }
+  .social-share-icon-twitter{
+    color: $twitterColor;
   }
 }
+
+/*------------------------------------
+  方形主题
+------------------------------------*/
+.social-share-button-square{
+  .social-share-icon{
+    border: 1px solid $facebookColor;
+    text-decoration: none;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.5s ease;
+    border-radius: 15%;
+  }
+
+  .social-share-icon-facebook{
+    color: $facebookColor;
+    &:hover{
+      color: #fff;
+      background-color: $facebookColor;
+    }
+  }
+  .social-share-icon-tieba{
+    color: $tiebaColor;
+    border-color: $tiebaColor;
+    &:hover{
+      color: #fff;
+      background-color: $tiebaColor;
+    }
+  }
+  .social-share-icon-weibo{
+    color: $weiboColor;
+    border-color: $weiboColor;
+    &:hover{
+      color: #fff;
+      background-color: $weiboColor;
+    }
+  }
+  .social-share-icon-qq{
+    color: $QQColor;
+    border-color: $QQColor;
+    &:hover{
+      color: #fff;
+      background-color: $QQColor;
+    }
+  }
+  .social-share-icon-qzone{
+    color: $qZoneColor;
+    border-color: $qZoneColor;
+    &:hover{
+      color: #fff;
+      background-color: $qZoneColor;
+    }
+  }
+  .social-share-icon-douban{
+    color: $doubanColor;
+    border-color: $doubanColor;
+    &:hover{
+      color: #fff;
+      background-color: $doubanColor;
+    }
+  }
+  .social-share-icon-twitter{
+    color: $twitterColor;
+    border-color: $twitterColor;
+    &:hover{
+      color: #fff;
+      background-color: $twitterColor;
+    }
+  }
+}
+
+/*------------------------------------
+  圆形主题
+------------------------------------*/
+.social-share-button-circle{
+  @extend .social-share-button-square;
+  .social-share-icon{
+    border-radius: 50%;
+  }
+}
+

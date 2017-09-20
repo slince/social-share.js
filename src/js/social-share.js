@@ -23,6 +23,7 @@ class SocialShare {
     constructor(element, options) {
         this.container = $(element);
 
+        //provider映射
         this.providerClassMap = {
             'baidu': Baidu,
             'weibo': Weibo,
@@ -32,17 +33,19 @@ class SocialShare {
             'facebook': Facebook,
             'twitter': Twitter
         };
+        //处理公共的options
+        this.options = this._resolveOptions(options);
 
-        this.options = $.extend({
-            theme: false
-        }, options);
+        //处理容器节点的class
+        this._resolveContainerClass();
 
-        let className = 'social-share-button';
-        if (this.options.theme) {
-            className += ` social-share-button-${this.options.theme}`;
+        //创建providers
+        this.providers = this._createProviders();
+
+        //将provider的节点追加进入容器
+        for (const provider in this.providers) {
+            this.container.append(this.providers[provider].getElement())
         }
-        this.container.addClass(className);
-        this._createProviders();
     }
 
     /**
@@ -58,40 +61,96 @@ class SocialShare {
     /**
      * 创建providers
      *
+     * @return {Object}
      * @private
      */
     _createProviders(){
-        this.providers = {};
+        const providers = {};
         for (const provider in this.options ) {
-            if (typeof this.providerClassMap[provider] === 'undefined') {
+            if (
+                typeof this.providerClassMap[provider] === 'undefined'
+                || this.options[provider] === false
+            ) {
                 continue;
             }
-            const options = SocialShare._mergeOptions(this.options[provider]);
-            const instance = new this.providerClassMap[provider](options);
-
-            this.providers[provider] = instance;
-            this.container.append(instance.getElement());
+            const options = this._mergeProviderOptions(this.options[provider]);
+            providers[provider] = new this.providerClassMap[provider](options);
         }
+        return providers;
+    }
+
+    /**
+     * 处理公共options
+     *
+     * @param {Object} options
+     * @return {Object}
+     * @private
+     */
+    _resolveOptions(options){
+        options = $.extend({
+            theme: false,
+            weibo: true,
+            qq: true,
+            qzone:true,
+            baidu: true,
+            douban: true,
+            facebook: true,
+            twitter: true
+        }, options);
+
+        if (typeof options.title === 'undefined') {
+            options.title = document.title;
+        }
+
+        if (typeof options.url === 'undefined') {
+            options.url = location.href;
+        }
+
+        if (typeof options.summary === 'undefined') {
+            options.summary = options.title;
+        }
+        return options;
+    }
+
+    /**
+     * 处理容器的class
+     *
+     * @private
+     */
+    _resolveContainerClass(){
+        let className = 'social-share-button';
+        if (this.options.theme) {
+            className += ` social-share-button-${this.options.theme}`;
+        }
+        this.container.addClass(className);
     }
 
     /**
      * 合并provider的options
      *
-     * @param {Object} options
+     * @param {Object|Boolean} options
      * @returns {Object}
      * @private
      */
-    static _mergeOptions(options){
+    _mergeProviderOptions(options){
+        if (options === true) { //如果provider的配置为true，则使用默认参数
+            options = {}
+        }
+
         if (!options.title) {
-            options.title = document.title;
+            options.title = this.options.title;
         }
         if (!options.url) {
-            options.url = location.href;
+            options.url = this.options.url;
+        }
+        if (!options.image) {
+            options.image = this.options.image;
         }
         if (!options.summary) {
-            options.summary = options.title;
+            options.summary = this.options.summary;
         }
         options.url = encodeURIComponent(options.url);
+        options.image = encodeURIComponent(options.image);
         return options;
     }
 }

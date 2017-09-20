@@ -1,0 +1,116 @@
+<html lang="zh">
+<head>
+    <title>定制内容</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/social-share.min.css"/>
+    <style type="text/css">
+        *{
+           padding: 0;
+           margin: 0;
+        }
+        
+        section{
+           padding: 20px;
+        }
+
+        section > div{
+            margin: 20px 0;
+            padding-left: 100px;
+        }
+
+        h5{
+            font-weight: 600;
+        }
+
+        pre{
+            padding: 14px;
+            overflow: auto;
+            line-height: 1.45;
+            border-radius: 3px;
+            color: #44619D;
+            border: none;
+            word-wrap: normal;
+            background-color: #f5f5f5;
+        }
+
+        code{
+            font-size: 100%;
+            white-space: pre;
+            background: transparent;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section>
+        <h5>一、定制分享内容和链接</h5>
+        <div class="social-share-container1"></div>
+        <pre>
+            <code>
+                new SocialShare('.social-share-container1', {
+
+                    // 定义通用的分享参数
+                    title: '百度搜索',
+                    url: 'http://www.baidu.com',
+                    summary: '一个中文搜索网站',
+                    image: 'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png',
+
+                    // 单独定义微博的分享参数,其它的同
+                    weibo: {
+                        title: '网易',
+                        url: 'http://www.qq.com',
+                        summary: '网易门户',
+                        image: 'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png',
+                    }
+                });
+            </code>
+        </pre>
+
+        <blockquote>
+            1. 默认分享的标题是当前页面title，默认分享当前地址;
+            2.
+        </blockquote>
+    </section>
+
+    <section>
+        <h5>二、定制分享按钮</h5>
+        <div class="social-share-container2"></div>
+        <pre><code>
+            new SocialShare('.social-share-container2', {
+                facebook: false,
+                twitter: false
+            });
+            </code></pre>
+        <blockquote>
+            去除Facebook和Twitter分享
+        </blockquote>
+    </section>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="../dist/social-share.min.js"></script>
+<script type="text/javascript">
+    new SocialShare('.social-share-container1', {
+        title: '百度搜索',
+        url: 'http://www.baidu.com',
+        summary: '一个中文搜索网站',
+        image: 'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png',
+
+        weibo: {
+            title: '网易',
+            url: 'http://www.qq.com',
+            summary: '网易门户',
+            image: 'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png',
+        }
+    });
+    
+    new SocialShare('.social-share-container2', {
+        facebook: false,
+        twitter: false
+    });
+</script>
+</body>
+</html>

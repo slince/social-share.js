@@ -9,7 +9,7 @@ class Weibo extends Provider {
     }
 
     _getUrlTemplate(){
-        return 'http://service.weibo.com/share/share.php?url={url}&appkey={appKey}&title={title}&pic=&searchPic=true';
+        return 'http://service.weibo.com/share/share.php?url={url}&appkey={appKey}&title={title}&pic={image}&searchPic=true';
     }
 }
 

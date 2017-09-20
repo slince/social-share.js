@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "iconfont.css";
+
 //Facebook主色
 $facebookColor: #44619D;
 //微博主色
@@ -22,17 +24,17 @@ $darkColor: #333;
 
   .social-share-icon{
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     color: $facebookColor;
     margin-right: 5px;
+    transition: opacity 0.5s ease;
+    &:hover{
+      opacity: 0.5;
+    }
   }
 
   .social-share-icon-facebook{
     color: $facebookColor;
-    &:hover{
-      color: #fff;
-      background-color: $facebookColor;
-    }
   }
   .social-share-icon-tieba{
     color: $tiebaColor;

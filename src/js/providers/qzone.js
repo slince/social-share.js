@@ -16,7 +16,7 @@ class QZone extends Provider {
     }
 
     _getUrlTemplate(){
-        return 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={{title}}&desc={{desc}}&summary={{summary}}&site={{site}}';
+        return 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={url}&title={title}&desc={desc}&summary={summary}&site={site}';
     }
 }
 

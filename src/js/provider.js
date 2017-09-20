@@ -57,7 +57,6 @@ class Provider {
      */
     _createUrl(){
         let urlTemplate = this._getUrlTemplate();
-        console.log(this.options);
         return urlTemplate.replace(/\{(\w+)\}/g, (matches) => {
             const parameter = matches.slice(1, -1);
             if (typeof this.options[parameter] !== 'undefined') {

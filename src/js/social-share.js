@@ -3,8 +3,14 @@
 //导入css样式文件
 import '../scss/social-share.scss';
 import $ from 'jquery';
-import Facebook from  './providers/facebook.js';
+import Baidu from  './providers/baidu.js';
+import Weibo from  './providers/weibo.js';
+import QQ from  './providers/qq.js';
+import QZone from  './providers/qzone.js';
+import Douban from  './providers/douban.js';
 
+import Facebook from  './providers/facebook.js';
+import Twitter from  './providers/twitter.js';
 
 class SocialShare {
 
@@ -14,7 +20,12 @@ class SocialShare {
 
         }, options);
         this.providerClassMap = {
-            'facebook': Facebook
+            'baidu': Baidu,
+            'weibo': Weibo,
+            'qq': QQ,
+            'qzone': QZone,
+            'douban': Douban,
+            'facebook': Facebook,
         };
         this._createProviders();
     }
@@ -40,7 +51,7 @@ class SocialShare {
             options.url = location.href;
         }
         const providerClass = this.providerClassMap[provider];
-        const instance = new Facebook(options);
+        const instance = new providerClass(options);
         return instance;
     }
 }

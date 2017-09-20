@@ -3,15 +3,13 @@
 import $ from 'jquery';
 import * as util from './util.js';
 
-console.log(util);
-
 class Provider {
 
     constructor(options){
         this.options = $.extend({
             width: 575,
             height: 400,
-            iconClass: `social-icon-${this.getName()}`
+            iconClass: `social-share-icon social-share-icon-${this.getName()}`
         }, options);
         this.element = {};
         this.element = this._createDomNode();

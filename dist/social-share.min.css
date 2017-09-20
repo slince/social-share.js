@@ -1,4 +1,6 @@
-.social-share-button .social-share-icon {
-  font-size: 24px; }
+a.social-share-button {
+  text-decoration: none; }
+  a.social-share-button .social-share-icon {
+    font-size: 24px; }
 
 /*# sourceMappingURL=social-share.min.css.map*/

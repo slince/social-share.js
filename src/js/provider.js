@@ -14,7 +14,6 @@ class Provider {
             height: 400,
             iconClass: `social-share-icon social-share-icon-${this.getName()}`
         }, options);
-        this.element = {};
         this.element = this._createDomNode();
     }
 

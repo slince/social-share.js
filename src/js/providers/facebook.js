@@ -3,12 +3,6 @@
 import Provider from '../provider.js';
 
 class Facebook extends Provider {
-    constructor(options){
-        if (!options.summary) {
-            options.summary = options.title;
-        }
-        super(options);
-    }
     getName(){
         return 'facebook';
     }

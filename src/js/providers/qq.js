@@ -6,7 +6,7 @@ class QQ extends Provider {
 
     constructor(options){
         if (!options.desc) {
-            options.desc = options.title;
+            options.desc = options.summary;
         }
         super(options);
     }

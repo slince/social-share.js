@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 //导入css样式文件
 import '../scss/social-share.scss';
@@ -35,7 +35,6 @@ class SocialShare {
         };
         //处理公共的options
         this.options = this._resolveOptions(options);
-
         //处理容器节点的class
         this._resolveContainerClass();
 
@@ -142,14 +141,17 @@ class SocialShare {
         if (!options.url) {
             options.url = this.options.url;
         }
-        if (!options.image) {
+        if (!options.image && this.options.image) {
             options.image = this.options.image;
         }
         if (!options.summary) {
             options.summary = this.options.summary;
         }
+
+        if (options.image) {
+            options.image = encodeURIComponent(options.image);
+        }
         options.url = encodeURIComponent(options.url);
-        options.image = encodeURIComponent(options.image);
         return options;
     }
 }

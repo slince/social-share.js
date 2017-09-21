@@ -6,10 +6,10 @@ class Baidu extends Provider {
 
     constructor(options){
         if (!options.desc) {
-            options.desc = options.title;
+            options.desc = options.summary;
         }
         if (!options.comment) {
-            options.comment = options.title;
+            options.comment = options.summary;
         }
         super(options);
     }

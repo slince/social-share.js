@@ -34,10 +34,7 @@
   text-decoration: none;
   font-size: 20px;
   color: #44619D;
-  margin-right: 5px;
-  transition: opacity 0.5s ease; }
-  .social-share-button .social-share-icon:hover {
-    opacity: 0.5; }
+  margin-right: 5px; }
 
 .social-share-button .social-share-icon-facebook {
   color: #44619D; }
@@ -59,6 +56,14 @@
 
 .social-share-button .social-share-icon-twitter {
   color: #00acee; }
+
+/*------------------------------------
+  默认主题
+------------------------------------*/
+.social-share-button-default .social-share-icon {
+  transition: opacity 0.5s ease; }
+  .social-share-button-default .social-share-icon:hover {
+    opacity: 0.5; }
 
 /*------------------------------------
   方形主题

@@ -27,10 +27,6 @@ $darkColor: #333;
     font-size: 20px;
     color: $facebookColor;
     margin-right: 5px;
-    transition: opacity 0.5s ease;
-    &:hover{
-      opacity: 0.5;
-    }
   }
 
   .social-share-icon-facebook{
@@ -53,6 +49,18 @@ $darkColor: #333;
   }
   .social-share-icon-twitter{
     color: $twitterColor;
+  }
+}
+
+/*------------------------------------
+  默认主题
+------------------------------------*/
+.social-share-button-default{
+  .social-share-icon {
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 

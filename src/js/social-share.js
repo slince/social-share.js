@@ -88,7 +88,7 @@ class SocialShare {
      */
     _resolveOptions(options){
         options = $.extend({
-            theme: false,
+            theme: 'default',
             weibo: true,
             qq: true,
             qzone:true,

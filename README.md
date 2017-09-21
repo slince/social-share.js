@@ -69,7 +69,7 @@ $ yarn add social-share-button.js
 ### Quick start
 
 ```javascript
-import SocialShare from 'social-share'; //如果你是通过script标签引入，则不需要改步骤
+import SocialShare from 'social-share-button.js'; //如果你是通过script标签引入则不需要此步骤
 
 new SocialShare('.social-share-container');
 ```

@@ -13,28 +13,33 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 默认支持五个主题 `square`, `circle`, `dark-square`, `dark-circle` 和默认主题 `default` , 默认主题不需要设置 `theme` 选项。
 
 - 默认主题
+
 ![默认](./source/default.png)
 
 - 方形主题
+
 ![方形](./source/square.png)
 
 - 圆形主题
+
 ![圆形](./source/circle.png)
 
 - 暗色方形主题
+
 ![暗色方形](./source/dark-square.png)
 
 - 暗色圆形主题
+
 ![暗色圆形](./source/dark-circle.png)
 
 当然你也可以自定义主题，容器节点上会自动追加类名 `social-share-button` 和 `social-share-button-主题名`, 你可以使用该类对样式覆盖或者扩充。
 
 
-# Installation
+## Installation
 
 支持以下三种安装方式
 
-## 通过 NPM/Yarn 安装
+### 通过 NPM/Yarn 安装
 
 ```bash
 $ npm install social-share-button.js --save
@@ -46,12 +51,15 @@ $ npm install social-share-button.js --save
 $ yarn add social-share-button.js
 ```
 
-## 通过 script 标签引入
+### 通过 script 标签引入
 
 下载本项目中dist目录下面的`social-share.min.js`和`social-share.min.css`文件，拷贝到项目中，通过script和link标签
 分别引入js文件和css文件即可
 
-# Quick start
+
+## Basic Usage
+
+### Quick start
 
 ```javascript
 import SocialShare from 'social-share'; //如果你是通过script标签引入，则不需要改步骤
@@ -59,7 +67,7 @@ import SocialShare from 'social-share'; //如果你是通过script标签引入�
 new SocialShare('.social-share-container');
 ```
 
-## 切换主题
+### 切换主题
 
 ```javascript
 new SocialShare('.social-share-container', {
@@ -67,7 +75,7 @@ new SocialShare('.social-share-container', {
 });
 ```
 
-## 定制分享参数
+### 定制分享参数
 
 ```javascript
 new SocialShare('.social-share-container', {
@@ -88,7 +96,7 @@ new SocialShare('.social-share-container', {
 });
 ```
 
-## 关闭指定按钮
+### 关闭指定按钮
 
 ```javascript
 new SocialShare('.social-share-container', {
@@ -99,6 +107,6 @@ new SocialShare('.social-share-container', {
 
 更多演示请参阅[examples](./examples)
 
-# License
+## License
 
 Licensed under MIT

@@ -18,24 +18,23 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 
 - 默认主题
 
-![默认](./source/default.png)
+![默认](https://raw.githubusercontent.com/slince/social-share.js/master/source/default.png)
 
 - 方形主题
 
-![方形](./source/square.png)
+![方形](https://raw.githubusercontent.com/slince/social-share.js/master/source/square.png)
 
 - 圆形主题
 
-![圆形](./source/circle.png)
+![圆形](https://raw.githubusercontent.com/slince/social-share.js/master/source/circle.png)
 
 - 暗色方形主题
 
-![暗色方形](./source/dark-square.png)
+![暗色方形](https://raw.githubusercontent.com/slince/social-share.js/master/source/dark-square.png)
 
 - 暗色圆形主题
 
-![暗色圆形](./source/dark-circle.png)
-
+![暗色圆形](https://raw.githubusercontent.com/slince/social-share.js/master/source/dark-circle.png)
 
 
 

@@ -1,6 +1,7 @@
 <h1 align="center">Social Share Button</h1>
 
 [![Build Status](https://img.shields.io/travis/slince/social-share.js/master.svg?style=flat-square)](https://travis-ci.org/slince/social-share.js)
+[![npm version](https://img.shields.io/npm/v/social-share-button.js.svg?style=flat-square)](https://www.npmjs.com/package/social-share-button.js.svg) 
 [![license](https://img.shields.io/npm/l/social-share-button.js.svg?style=flat-square)](https://www.npmjs.com/package/social-share-button.js)
 
 Social Share可以帮助在你的网站上轻松方便的创建分享到社交网站的按钮，目前支持以下社交网站分享并且还在不断增加中。默认支持
@@ -21,23 +22,23 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 
 - 默认主题
 
-![默认](https://raw.githubusercontent.com/slince/social-share.js/master/source/default.png)
+![默认](https://raw.githubusercontent.com/slince/social-share.js/master/assets/default.png)
 
 - 方形主题
 
-![方形](https://raw.githubusercontent.com/slince/social-share.js/master/source/square.png)
+![方形](https://raw.githubusercontent.com/slince/social-share.js/master/assets/square.png)
 
 - 圆形主题
 
-![圆形](https://raw.githubusercontent.com/slince/social-share.js/master/source/circle.png)
+![圆形](https://raw.githubusercontent.com/slince/social-share.js/master/assets/circle.png)
 
 - 暗色方形主题
 
-![暗色方形](https://raw.githubusercontent.com/slince/social-share.js/master/source/dark-square.png)
+![暗色方形](https://raw.githubusercontent.com/slince/social-share.js/master/assets/dark-square.png)
 
 - 暗色圆形主题
 
-![暗色圆形](https://raw.githubusercontent.com/slince/social-share.js/master/source/dark-circle.png)
+![暗色圆形](https://raw.githubusercontent.com/slince/social-share.js/master/assets/dark-circle.png)
 
 
 

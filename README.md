@@ -1,8 +1,11 @@
 <h1 align="center">Social Share Button</h1>
 
+[![Build Status](https://img.shields.io/travis/slince/social-share.js/master.svg?style=flat-square)](https://travis-ci.org/slince/social-share.js)
+[![license](https://img.shields.io/npm/l/social-share-button.js.svg)](https://www.npmjs.com/package/social-share-button.js)
+
 Social Share可以帮助在你的网站上轻松方便的创建分享到社交网站的按钮，目前支持以下社交网站分享并且还在不断增加中。默认支持
-五个主题 `square`, `circle`, `dark-square`, `dark-circle` 和默认主题 `default` , 默认主题不需要设置 `theme` 选项。当然你
-也可以自定义主题，容器节点上会自动追加类名 `social-share-button` 和 `social-share-button-主题名`, 你可以使用该类对样式覆盖或者扩充。
+五个主题 `square`, `circle`, `dark-square`, `dark-circle` 和默认主题 `default` , 默认主题不需要设置 `theme` 选项。
+当然你也可以自定义主题，容器节点上会自动追加类名 `social-share-button` 和 `social-share-button-主题名`, 你可以使用该类对样式覆盖或者扩充。
 
 ### 支持的网站：
 
@@ -42,22 +45,22 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 
 支持以下三种安装方式
 
-### 通过 NPM/Yarn 安装
+- 通过 NPM/Yarn 安装
 
 ```bash
 $ npm install social-share-button.js --save
 ```
 
-如果你使用 yarn 的话：
+如果你使用 yarn 的话
 
 ```bash
 $ yarn add social-share-button.js
 ```
 
-### 通过 script 标签引入
+- 通过 script 标签引入
 
 下载本项目中dist目录下面的`social-share.min.js`和`social-share.min.css`文件，拷贝到项目中，通过script和link标签
-分别引入js文件和css文件即可
+分别引入js文件和css文件即可。
 
 
 ## Basic Usage

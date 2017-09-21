@@ -1,5 +1,5 @@
 {
-  "name": "social-share-button",
+  "name": "social-share-button.js",
   "version": "1.0.0",
   "description": "Help to create social share button",
   "main": "dist/social-share.min.js",

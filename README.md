@@ -1,6 +1,6 @@
-<h1 align="center">Social Share</h1>
+<h1 align="center">Social Share Button</h1>
 
-Social Share可以帮助在你的网站上轻松方便的创建分享到社交网站的按钮，目前支持的社交网站分享有：
+Social Share可以帮助在你的网站上轻松方便的创建分享到社交网站的按钮，目前支持以下社交网站分享并且还在不断增加中。
 
 - [微博](http://www.weibbo.com)
 - [百度贴吧](http://tieba.baidu.com)
@@ -10,7 +10,25 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 - [Facebook](http://www.facebook.com)
 - [Twitter](http://www.twitter.com)
 
-并且还在不断增加中。
+默认支持五个主题 `square`, `circle`, `dark-square`, `dark-circle` 和默认主题 `default` , 默认主题不需要设置 `theme` 选项。
+
+- 默认主题
+![默认](./source/default.png)
+
+- 方形主题
+![方形](./source/square.png)
+
+- 圆形主题
+![圆形](./source/circle.png)
+
+- 暗色方形主题
+![暗色方形](./source/dark-square.png)
+
+- 暗色圆形主题
+![暗色圆形](./source/dark-circle.png)
+
+当然你也可以自定义主题，容器节点上会自动追加类名 `social-share-button` 和 `social-share-button-主题名`, 你可以使用该类对样式覆盖或者扩充。
+
 
 # Installation
 
@@ -19,13 +37,13 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 ## 通过 NPM/Yarn 安装
 
 ```bash
-$ npm install social-share.js --save
+$ npm install social-share-button.js --save
 ```
 
 如果你使用 yarn 的话：
 
 ```bash
-$ yarn add social-share.js --save
+$ yarn add social-share-button.js
 ```
 
 ## 通过 script 标签引入
@@ -33,28 +51,21 @@ $ yarn add social-share.js --save
 下载本项目中dist目录下面的`social-share.min.js`和`social-share.min.css`文件，拷贝到项目中，通过script和link标签
 分别引入js文件和css文件即可
 
-# Basic Usage
+# Quick start
 
 ```javascript
 import SocialShare from 'social-share'; //如果你是通过script标签引入，则不需要改步骤
 
 new SocialShare('.social-share-container');
-
 ```
 
 ## 切换主题
-
-默认支持五个主题`square`, `circle`, `dark-square`, `dark-circle`和默认主题
-
-设置主题：
 
 ```javascript
 new SocialShare('.social-share-container', {
     theme: 'square'
 });
 ```
-默认主题，不需要设置`theme`选项
-
 
 ## 定制分享参数
 

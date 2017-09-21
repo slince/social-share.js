@@ -31,6 +31,8 @@ module.exports = {
                         options: {
                             esnext: true,
                             strict: global,
+                            browser: true,
+                            devel: true
                         }
                     }
                 ]

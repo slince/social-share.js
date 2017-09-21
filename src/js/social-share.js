@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 //导入css样式文件
 import '../scss/social-share.scss';
@@ -44,7 +44,7 @@ class SocialShare {
 
         //将provider的节点追加进入容器
         for (const provider in this.providers) {
-            this.container.append(this.providers[provider].getElement())
+            this.container.append(this.providers[provider].getElement());
         }
     }
 
@@ -68,8 +68,7 @@ class SocialShare {
         const providers = {};
         for (const provider in this.options ) {
             if (
-                typeof this.providerClassMap[provider] === 'undefined'
-                || this.options[provider] === false
+                typeof this.providerClassMap[provider] === 'undefined' || this.options[provider] === false
             ) {
                 continue;
             }
@@ -134,7 +133,7 @@ class SocialShare {
      */
     _mergeProviderOptions(options){
         if (options === true) { //如果provider的配置为true，则使用默认参数
-            options = {}
+            options = {};
         }
 
         if (!options.title) {

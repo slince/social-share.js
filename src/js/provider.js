@@ -60,10 +60,10 @@ class Provider {
         return urlTemplate.replace(/\{(\w+)\}/g, (matches) => {
             const parameter = matches.slice(1, -1);
             if (typeof this.options[parameter] !== 'undefined') {
-                return this.options[parameter]
+                return this.options[parameter];
             }
-            return ''
-        })
+            return '';
+        });
     }
 
     /**

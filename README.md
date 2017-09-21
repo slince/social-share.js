@@ -1,6 +1,10 @@
 <h1 align="center">Social Share Button</h1>
 
-Social Share可以帮助在你的网站上轻松方便的创建分享到社交网站的按钮，目前支持以下社交网站分享并且还在不断增加中。
+Social Share可以帮助在你的网站上轻松方便的创建分享到社交网站的按钮，目前支持以下社交网站分享并且还在不断增加中。默认支持
+五个主题 `square`, `circle`, `dark-square`, `dark-circle` 和默认主题 `default` , 默认主题不需要设置 `theme` 选项。当然你
+也可以自定义主题，容器节点上会自动追加类名 `social-share-button` 和 `social-share-button-主题名`, 你可以使用该类对样式覆盖或者扩充。
+
+### 支持的网站：
 
 - [微博](http://www.weibbo.com)
 - [百度贴吧](http://tieba.baidu.com)
@@ -10,7 +14,7 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 - [Facebook](http://www.facebook.com)
 - [Twitter](http://www.twitter.com)
 
-默认支持五个主题 `square`, `circle`, `dark-square`, `dark-circle` 和默认主题 `default` , 默认主题不需要设置 `theme` 选项。
+### 主题：
 
 - 默认主题
 
@@ -32,7 +36,7 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 
 ![暗色圆形](./source/dark-circle.png)
 
-当然你也可以自定义主题，容器节点上会自动追加类名 `social-share-button` 和 `social-share-button-主题名`, 你可以使用该类对样式覆盖或者扩充。
+
 
 
 ## Installation

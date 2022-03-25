@@ -26,7 +26,8 @@ export class Provider {
             height: 400,
             iconClass: `social-share-icon social-share-icon-${this.getName()}`
         }, options)
-        this.element = this.createDomNode()
+        this.element = this.createElement()
+        this.bindEvents(this.element)
     }
 
     /**
@@ -53,11 +54,9 @@ export class Provider {
      * @returns {jQuery}
      * @private
      */
-    createDomNode(){
-        let html = `<a href="javascript:void(0)" class="${this.options.iconClass}"></a>`
-        const element = $(html)
-        this.bindEvents(element)
-        return element
+    createElement(){
+        const html = `<a href="javascript:void(0)" class="${this.options.iconClass}"></a>`
+        return $(html)
     }
 
     /**
@@ -94,10 +93,15 @@ export class Provider {
      * @param element
      * @private
      */
-    bindEvents(element) {
-        element.on('click', () => {
-            const win = openWin(this.createUrl(), this.options.width, this.options.height)
-            win.focus()
-        })
+    bindEvents(element: JQuery<Element>) {
+        element.on('click', this.onClick)
+    }
+
+    /**
+     * 点击按钮事件
+     */
+    onClick(){
+        const win = openWin(this.createUrl(), this.options.width, this.options.height)
+        win.focus()
     }
 }

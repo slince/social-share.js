@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
     entry: {
-        'social-share.min': path.resolve(__dirname, 'src/social-share.ts'),
+        'social-share': path.resolve(__dirname, 'src/index.ts'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -26,7 +26,8 @@ module.exports = {
         headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Credentials": true }
     },
     externals: {
-        jquery: 'jQuery'
+        jquery: 'jQuery',
+        QRCode: 'QRCode'
     },
     devtool: 'source-map',
     resolve: {

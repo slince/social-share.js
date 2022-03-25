@@ -1,174 +1,174 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
-@import "iconfont.css"
+@import "iconfont.css";
 
 //Facebook主色
-$facebookColor: #44619D
+$facebookColor: #44619D;
 //微博主色
-$weiboColor: #d72a2b
+$weiboColor: #d72a2b;
 //QQ主色
-$QQColor: #3299dc
+$QQColor: #3299dc;
 //QZone主色
-$qZoneColor: #f2c141
+$qZoneColor: #f2c141;
 //豆瓣主色
-$doubanColor: #319867
+$doubanColor: #319867;
 //twitter主色
-$twitterColor: #00acee
+$twitterColor: #00acee;
 //贴吧主色
-$tiebaColor: #3285ff
+$tiebaColor: #3285ff;
 
 //暗色
-$darkColor: #333
+$darkColor: #333;
 
 .social-share-button{
 
-  .social-share-icon{
-    text-decoration: none
-    font-size: 20px
-    color: $facebookColor
-    margin-right: 5px
-  }
+    .social-share-icon{
+        text-decoration: none;
+        font-size: 20px;
+        color: $facebookColor;
+        margin-right: 5px;
+    }
 
-  .social-share-icon-facebook{
-    color: $facebookColor
-  }
-  .social-share-icon-tieba{
-    color: $tiebaColor
-  }
-  .social-share-icon-weibo{
-    color: $weiboColor
-  }
-  .social-share-icon-qq{
-    color: $QQColor
-  }
-  .social-share-icon-qzone{
-    color: $qZoneColor
-  }
-  .social-share-icon-douban{
-    color: $doubanColor
-  }
-  .social-share-icon-twitter{
-    color: $twitterColor
-  }
+    .social-share-icon-facebook{
+        color: $facebookColor;
+    }
+    .social-share-icon-tieba{
+        color: $tiebaColor;
+    }
+    .social-share-icon-weibo{
+        color: $weiboColor;
+    }
+    .social-share-icon-qq{
+        color: $QQColor;
+    }
+    .social-share-icon-qzone{
+        color: $qZoneColor;
+    }
+    .social-share-icon-douban{
+        color: $doubanColor;
+    }
+    .social-share-icon-twitter{
+        color: $twitterColor;
+    }
 }
 
 /*------------------------------------
   默认主题
 ------------------------------------*/
 .social-share-button-default{
-  .social-share-icon {
-    transition: opacity 0.5s ease
-    &:hover {
-      opacity: 0.5
+    .social-share-icon {
+        transition: opacity 0.5s ease;
+        &:hover {
+            opacity: 0.5;
+        }
     }
-  }
 }
 
 /*------------------------------------
   方形主题
 ------------------------------------*/
 .social-share-button-square{
-  .social-share-icon{
-    border: 1px solid $facebookColor
-    font-size: 18px
-    width: 24px
-    height: 24px
-    line-height: 24px
-    display: inline-block
-    text-align: center
-    transition: background 0.5s ease
-    border-radius: 15%
-  }
+    .social-share-icon{
+        border: 1px solid $facebookColor;
+        font-size: 18px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        display: inline-block;
+        text-align: center;
+        transition: background 0.5s ease;
+        border-radius: 15%;
+    }
 
-  .social-share-icon-facebook{
-    color: $facebookColor
-    &:hover{
-      color: #fff
-      background-color: $facebookColor
+    .social-share-icon-facebook{
+        color: $facebookColor;
+        &:hover{
+            color: #fff;
+            background-color: $facebookColor;
+        }
     }
-  }
-  .social-share-icon-tieba{
-    color: $tiebaColor
-    border-color: $tiebaColor
-    &:hover{
-      color: #fff
-      background-color: $tiebaColor
+    .social-share-icon-tieba{
+        color: $tiebaColor;
+        border-color: $tiebaColor;
+        &:hover{
+            color: #fff;
+            background-color: $tiebaColor;
+        }
     }
-  }
-  .social-share-icon-weibo{
-    color: $weiboColor
-    border-color: $weiboColor
-    &:hover{
-      color: #fff
-      background-color: $weiboColor
+    .social-share-icon-weibo{
+        color: $weiboColor;
+        border-color: $weiboColor;
+        &:hover{
+            color: #fff;
+            background-color: $weiboColor;
+        }
     }
-  }
-  .social-share-icon-qq{
-    color: $QQColor
-    border-color: $QQColor
-    &:hover{
-      color: #fff
-      background-color: $QQColor
+    .social-share-icon-qq{
+        color: $QQColor;
+        border-color: $QQColor;
+        &:hover{
+            color: #fff;
+            background-color: $QQColor;
+        }
     }
-  }
-  .social-share-icon-qzone{
-    color: $qZoneColor
-    border-color: $qZoneColor
-    &:hover{
-      color: #fff
-      background-color: $qZoneColor
+    .social-share-icon-qzone{
+        color: $qZoneColor;
+        border-color: $qZoneColor;
+        &:hover{
+            color: #fff;
+            background-color: $qZoneColor;
+        }
     }
-  }
-  .social-share-icon-douban{
-    color: $doubanColor
-    border-color: $doubanColor
-    &:hover{
-      color: #fff
-      background-color: $doubanColor
+    .social-share-icon-douban{
+        color: $doubanColor;
+        border-color: $doubanColor;
+        &:hover{
+            color: #fff;
+            background-color: $doubanColor;
+        }
     }
-  }
-  .social-share-icon-twitter{
-    color: $twitterColor
-    border-color: $twitterColor
-    &:hover{
-      color: #fff
-      background-color: $twitterColor
+    .social-share-icon-twitter{
+        color: $twitterColor;
+        border-color: $twitterColor;
+        &:hover{
+            color: #fff;
+            background-color: $twitterColor;
+        }
     }
-  }
 }
 
 /*------------------------------------
   圆形主题
 ------------------------------------*/
 .social-share-button-circle{
-  @extend .social-share-button-square
-  .social-share-icon{
-    border-radius: 50%
-  }
+    @extend .social-share-button-square;
+    .social-share-icon{
+        border-radius: 50%;
+    }
 }
 
 /*------------------------------------
   方形暗色主题
 ------------------------------------*/
 .social-share-button-dark-square{
-  @extend .social-share-button-square
-  .social-share-icon{
-    color: $darkColor
-    border-color: $darkColor
+    @extend .social-share-button-square;
+    .social-share-icon{
+        color: $darkColor;
+        border-color: $darkColor;
 
-    &:hover{
-      background-color: $darkColor
-      color: #fff
+        &:hover{
+            background-color: $darkColor;
+            color: #fff;
+        }
     }
-  }
 }
 
 /*------------------------------------
   圆形暗色主题
 ------------------------------------*/
 .social-share-button-dark-circle{
-  @extend .social-share-button-dark-square
-  .social-share-icon{
-    border-radius: 50%
-  }
+    @extend .social-share-button-dark-square;
+    .social-share-icon{
+        border-radius: 50%;
+    }
 }

@@ -1,23 +1,15 @@
 //导入css样式文件
-import './scss/social-share.scss'
 import $ from 'jquery'
 
-//导入Provider
-import Baidu from  './providers/baidu'
-import Weibo from  './providers/weibo'
-import QQ from  './providers/qq'
-import QZone from  './providers/qzone'
-import Douban from  './providers/douban'
-
-import Facebook from  './providers/facebook'
-import Twitter from  './providers/twitter'
 import {GenericProvideConfig, ProvideConfig, Provider} from "./provider"
+import {providers} from "./providers";
 
 type theme = 'square' | 'circle' | 'dark-square' | 'dark-circle'
 
 export interface SocialShareConfig extends ProvideConfig{
     theme: string
     weibo: boolean|GenericProvideConfig,
+    wechat: boolean|GenericProvideConfig,
     qq: boolean|GenericProvideConfig,
     qzone: boolean|GenericProvideConfig,
     baidu: boolean|GenericProvideConfig,
@@ -37,15 +29,7 @@ export class SocialShare {
         this.container = $(element)
 
         //provider映射
-        this.providerClassMap = {
-            'baidu': Baidu,
-            'weibo': Weibo,
-            'qq': QQ,
-            'qzone': QZone,
-            'douban': Douban,
-            'facebook': Facebook,
-            'twitter': Twitter
-        }
+        this.providerClassMap = providers
 
         //处理公共的options
         this.options = this.resolveOptions(options)

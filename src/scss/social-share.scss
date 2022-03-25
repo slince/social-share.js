@@ -20,12 +20,15 @@ $wechatColor: #04be02;
 $darkColor: #333;
 
 .social-share-button{
-
+    display: flex;
+    justify-content: left;
+    align-items: center;
     .social-share-icon{
         text-decoration: none;
         font-size: 20px;
         color: $facebookColor;
         margin-right: 5px;
+        position: relative;
     }
 
     .social-share-icon-facebook{
@@ -55,13 +58,51 @@ $darkColor: #333;
 }
 
 /*------------------------------------
+  wechat 弹窗
+------------------------------------*/
+
+.social-share-icon-wechat{
+    .social-share-wechat-popover{
+        display: none;
+        background: #fff;
+        text-align: center;
+        border: 1px solid #f3f3f3;
+        position: absolute;
+        padding: 10px 15px;
+        bottom: calc(-100% + 60px);
+        left: calc(-100% - 35px);
+        z-index: 1024;
+        &:hover{
+            opacity: 1;
+        }
+        .social-share-wechat-popover-title{
+            line-height: 2.2em;
+            font-size: 12px;
+            color: #333;
+            margin: 0;
+        }
+        .social-share-wechat-popover-qrcode{
+            margin: 10px auto;
+        }
+        .social-share-wechat-popover-footer{
+            font-size: 12px;
+            line-height: 1.5em;
+            color: #333
+        }
+    }
+}
+
+
+/*------------------------------------
   默认主题
 ------------------------------------*/
 .social-share-button-default{
     .social-share-icon {
         transition: opacity 0.5s ease;
         &:hover {
-            opacity: 0.5;
+            &::before{
+                opacity: 0.5;
+            }
         }
     }
 }
@@ -135,6 +176,14 @@ $darkColor: #333;
         &:hover{
             color: #fff;
             background-color: $twitterColor;
+        }
+    }
+    .social-share-icon-wechat{
+        color: $wechatColor;
+        border-color: $wechatColor;
+        &:hover{
+            color: #fff;
+            background-color: $wechatColor;
         }
     }
 }

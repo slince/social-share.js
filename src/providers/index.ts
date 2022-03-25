@@ -1,5 +1,5 @@
 import Wechat from "./wechat";
-import Baidu from  './baidu'
+import Tieba from './tieba'
 import Weibo from  './weibo'
 import QQ from  './qq'
 import QZone from  './qzone'
@@ -8,7 +8,7 @@ import Facebook from  './facebook'
 import Twitter from  './twitter'
 
 export const providers = {
-    'baidu': Baidu,
+    'tieba': Tieba,
     'weibo': Weibo,
     'wechat': Wechat,
     'qq': QQ,

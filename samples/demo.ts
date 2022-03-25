@@ -2,5 +2,8 @@
 import {SocialShare} from "../src";
 
 $(()=>{
-    new SocialShare('.social-share-container');
+
+    new SocialShare('.social-share-container', {
+        theme: 'default',
+    });
 })

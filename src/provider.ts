@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import {openWin} from './util'
+import {SocialShareConfig} from "./social-share";
 
 export interface ProvideConfig{
     title?: string
@@ -10,6 +11,7 @@ export interface ProvideConfig{
 
 export interface GenericProvideConfig extends ProvideConfig{
     enabled?: boolean
+    sort?: number,
     width?: number
     height?: number
     iconClass?: string
@@ -17,10 +19,10 @@ export interface GenericProvideConfig extends ProvideConfig{
 
 export class Provider {
 
-    protected readonly options: GenericProvideConfig
-    private readonly element: JQuery<Element>
+    protected options: GenericProvideConfig
+    protected element: JQuery<HTMLElement>
 
-    constructor(options){
+    create(options: GenericProvideConfig){
         this.options = Object.assign({
             enabled: true,
             width: 575,
@@ -29,6 +31,29 @@ export class Provider {
         }, options)
         this.element = this.createElement()
         this.bindEvents(this.element)
+        return this.element
+    }
+
+    resolveOptions(options: GenericProvideConfig, socialOptions: ProvideConfig){
+        if (!options.title) {
+            options.title = socialOptions.title
+        }
+        if (!options.url) {
+            options.url = socialOptions.url
+        }
+        if (!options.summary) {
+            options.summary = socialOptions.summary
+        }
+        if (!options.image) {
+            options.image = socialOptions.image
+        }
+        if (!options.url) {
+            options.url = encodeURIComponent(options.url)
+        }
+        if (!options.image) {
+            options.image = encodeURIComponent(options.image)
+        }
+        return options
     }
 
     /**
@@ -50,12 +75,19 @@ export class Provider {
     }
 
     /**
+     * 获取排序值
+     */
+    getSort(): number{
+        return this.options.sort || 99
+    }
+
+    /**
      * 创建dom结构
      *
      * @returns {jQuery}
      * @private
      */
-    createElement(){
+    createElement(): JQuery<HTMLElement>{
         const html = `<a href="javascript:void(0)" class="${this.options.iconClass}"></a>`
         return $(html)
     }
@@ -94,7 +126,7 @@ export class Provider {
      * @param element
      * @private
      */
-    bindEvents(element: JQuery<Element>) {
+    bindEvents(element: JQuery<HTMLElement>) {
         element.on('click', this.onClick.bind(this))
     }
 

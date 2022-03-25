@@ -1,13 +1,17 @@
 
-import {Provider} from '../provider'
+import {GenericProvideConfig, Provider} from '../provider'
+
+export interface QZoneConfig extends GenericProvideConfig{
+    desc?: string
+}
 
 class QZone extends Provider {
 
-    constructor(options){
+    create(options: QZoneConfig){
         if (!options.desc) {
             options.desc = options.summary
         }
-        super(options)
+        return super.create(options)
     }
 
     getName(){

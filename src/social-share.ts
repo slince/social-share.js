@@ -3,6 +3,7 @@ import $ from 'jquery'
 
 import {GenericProvideConfig, ProvideConfig, Provider} from "./provider"
 import {providers} from "./providers";
+import {TiebaConfig} from "./providers/tieba";
 
 type theme = 'square' | 'circle' | 'dark-square' | 'dark-circle'
 
@@ -12,7 +13,7 @@ export interface SocialShareConfig extends ProvideConfig{
     wechat?: boolean|GenericProvideConfig,
     qq?: boolean|GenericProvideConfig,
     qzone?: boolean|GenericProvideConfig,
-    baidu?: boolean|GenericProvideConfig,
+    tieba?: boolean|TiebaConfig,
     douban?: boolean|GenericProvideConfig,
     facebook?: boolean|GenericProvideConfig,
     twitter?: boolean|GenericProvideConfig
@@ -20,12 +21,12 @@ export interface SocialShareConfig extends ProvideConfig{
 
 export class SocialShare {
 
-    private container: JQuery<Element>
+    private container: JQuery<HTMLElement>
     private readonly providerClassMap: {[key: string]: any}
     private readonly options: SocialShareConfig
-    private readonly providers: {[key:string]: Provider}
+    private readonly providers: Provider[]
 
-    constructor(element: string|Element, options?: SocialShareConfig) {
+    constructor(element: string|HTMLElement, options?: SocialShareConfig) {
         this.container = typeof element === 'string' ? $(element) : $(element)
 
         //provider映射
@@ -38,11 +39,9 @@ export class SocialShare {
 
         //创建providers
         this.providers = this.createProviders()
-
         //将provider的节点追加进入容器
-        for (const provider in this.providers) {
-            this.container.append(this.providers[provider].getElement())
-        }
+        const elements = this.providers.map(provider => provider.getElement())
+        this.container.append(elements)
     }
 
     /**
@@ -61,18 +60,21 @@ export class SocialShare {
      * @return {Object}
      * @private
      */
-    createProviders(): {[key:string]: Provider}{
-        const providers = {}
+    createProviders(): Provider[]{
+        const providers = []
         for (let provider in this.options ) {
             if (
                 typeof this.providerClassMap[provider] === 'undefined' || this.options[provider] === false
             ) {
                 continue
             }
-            const options = this.mergeProviderOptions(this.options[provider])
-            providers[provider] = new this.providerClassMap[provider](options)
+            providers.push(new this.providerClassMap[provider]())
         }
-        return providers
+        return providers.map(provider => {
+            const options = this.createProviderOptions(provider, this.options[provider.getName()])
+            provider.create(options)
+            return provider
+        }).sort((prev, next)=>prev.getSort() - next.getSort())
     }
 
     /**
@@ -86,13 +88,13 @@ export class SocialShare {
         options = Object.assign({
             theme: 'default',
             weibo: true,
-            wechat: true,
             qq: true,
             qzone:true,
-            baidu: true,
+            tieba: true,
             douban: true,
             facebook: true,
-            twitter: true
+            twitter: true,
+            wechat: true,
         }, options)
 
         if (typeof options.title === 'undefined') {
@@ -123,37 +125,11 @@ export class SocialShare {
         this.container.addClass(className)
     }
 
-    /**
-     * 合并provider的options
-     *
-     * @param {Object|Boolean} options
-     * @returns {Object}
-     * @private
-     */
-    mergeProviderOptions(options: boolean|GenericProvideConfig){
+    createProviderOptions(provider: Provider, options: boolean|GenericProvideConfig): GenericProvideConfig{
         //如果provider的配置为boolean，则使用默认参数
         if (typeof options === 'boolean') {
             options = {enabled: options}
         }
-
-        if (!options.title) {
-            options.title = this.options.title
-        }
-        if (!options.url) {
-            options.url = this.options.url
-        }
-        if (!options.summary) {
-            options.summary = this.options.summary
-        }
-        if (!options.image) {
-            options.image = this.options.image
-        }
-        if (!options.url) {
-            options.url = encodeURIComponent(options.url)
-        }
-        if (!options.image) {
-            options.image = encodeURIComponent(options.image)
-        }
-        return options
+        return provider.resolveOptions(options, this.options)
     }
 }

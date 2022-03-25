@@ -1,13 +1,17 @@
 
-import {Provider} from '../provider'
+import {GenericProvideConfig, Provider} from '../provider'
+
+export interface QQConfig extends GenericProvideConfig{
+    desc?: string
+}
 
 class QQ extends Provider {
 
-    constructor(options){
+    create(options: QQConfig){
         if (!options.desc) {
             options.desc = options.summary
         }
-        super(options)
+        return super.create(options)
     }
 
     getName(){

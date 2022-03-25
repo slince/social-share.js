@@ -1,16 +1,21 @@
 
-import {Provider} from '../provider'
+import {GenericProvideConfig, Provider} from '../provider'
 
-class Baidu extends Provider {
+export interface TiebaConfig extends GenericProvideConfig{
+    desc?: string
+    comment?: string
+}
 
-    constructor(options){
+class Tieba extends Provider {
+
+    create(options: TiebaConfig){
         if (!options.desc) {
             options.desc = options.summary
         }
         if (!options.comment) {
             options.comment = options.summary
         }
-        super(options)
+        return super.create(options)
     }
 
     getName(){
@@ -22,4 +27,4 @@ class Baidu extends Provider {
     }
 }
 
-export default Baidu
+export default Tieba

@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "social-share-icon"; /* Project id 3277636 */
+    src: url('//at.alicdn.com/t/font_3277636_mzxrxlobomc.woff2?t=1648198338026') format('woff2'),
+    url('//at.alicdn.com/t/font_3277636_mzxrxlobomc.woff?t=1648198338026') format('woff'),
+    url('//at.alicdn.com/t/font_3277636_mzxrxlobomc.ttf?t=1648198338026') format('truetype');
+}
+
+.social-share-icon {
+    font-family: "social-share-icon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.social-share-icon-share-tieba:before {
+    content: "\e639";
+}
+
+.social-share-icon-douban:before {
+    content: "\e688";
+}
+
+.social-share-icon-QQ:before {
+    content: "\e882";
+}
+
+.social-share-icon-twitter:before {
+    content: "\e883";
+}
+
+.social-share-icon-weibo:before {
+    content: "\e884";
+}
+
+.social-share-icon-wechat:before {
+    content: "\e885";
+}
+
+.social-share-icon-facebook:before {
+    content: "\e8e7";
+}
+
+.social-share-icon-qzone:before {
+    content: "\e629";
+}
+
+.social-share-button .social-share-icon{text-decoration:none;font-size:20px;color:#44619d;margin-right:5px}.social-share-button .social-share-icon-facebook{color:#44619d}.social-share-button .social-share-icon-tieba{color:#3285ff}.social-share-button .social-share-icon-weibo{color:#d72a2b}.social-share-button .social-share-icon-qq{color:#3299dc}.social-share-button .social-share-icon-qzone{color:#f2c141}.social-share-button .social-share-icon-douban{color:#319867}.social-share-button .social-share-icon-twitter{color:#00acee}.social-share-button-default .social-share-icon{transition:opacity .5s ease}.social-share-button-default .social-share-icon:hover{opacity:.5}.social-share-button-square .social-share-icon,.social-share-button-dark-square .social-share-icon,.social-share-button-dark-circle .social-share-icon,.social-share-button-circle .social-share-icon{border:1px solid #44619d;font-size:18px;width:24px;height:24px;line-height:24px;display:inline-block;text-align:center;transition:background .5s ease;border-radius:15%}.social-share-button-square .social-share-icon-facebook,.social-share-button-dark-square .social-share-icon-facebook,.social-share-button-dark-circle .social-share-icon-facebook,.social-share-button-circle .social-share-icon-facebook{color:#44619d}.social-share-button-square .social-share-icon-facebook:hover,.social-share-button-dark-square .social-share-icon-facebook:hover,.social-share-button-dark-circle .social-share-icon-facebook:hover,.social-share-button-circle .social-share-icon-facebook:hover{color:#fff;background-color:#44619d}.social-share-button-square .social-share-icon-tieba,.social-share-button-dark-square .social-share-icon-tieba,.social-share-button-dark-circle .social-share-icon-tieba,.social-share-button-circle .social-share-icon-tieba{color:#3285ff;border-color:#3285ff}.social-share-button-square .social-share-icon-tieba:hover,.social-share-button-dark-square .social-share-icon-tieba:hover,.social-share-button-dark-circle .social-share-icon-tieba:hover,.social-share-button-circle .social-share-icon-tieba:hover{color:#fff;background-color:#3285ff}.social-share-button-square .social-share-icon-weibo,.social-share-button-dark-square .social-share-icon-weibo,.social-share-button-dark-circle .social-share-icon-weibo,.social-share-button-circle .social-share-icon-weibo{color:#d72a2b;border-color:#d72a2b}.social-share-button-square .social-share-icon-weibo:hover,.social-share-button-dark-square .social-share-icon-weibo:hover,.social-share-button-dark-circle .social-share-icon-weibo:hover,.social-share-button-circle .social-share-icon-weibo:hover{color:#fff;background-color:#d72a2b}.social-share-button-square .social-share-icon-qq,.social-share-button-dark-square .social-share-icon-qq,.social-share-button-dark-circle .social-share-icon-qq,.social-share-button-circle .social-share-icon-qq{color:#3299dc;border-color:#3299dc}.social-share-button-square .social-share-icon-qq:hover,.social-share-button-dark-square .social-share-icon-qq:hover,.social-share-button-dark-circle .social-share-icon-qq:hover,.social-share-button-circle .social-share-icon-qq:hover{color:#fff;background-color:#3299dc}.social-share-button-square .social-share-icon-qzone,.social-share-button-dark-square .social-share-icon-qzone,.social-share-button-dark-circle .social-share-icon-qzone,.social-share-button-circle .social-share-icon-qzone{color:#f2c141;border-color:#f2c141}.social-share-button-square .social-share-icon-qzone:hover,.social-share-button-dark-square .social-share-icon-qzone:hover,.social-share-button-dark-circle .social-share-icon-qzone:hover,.social-share-button-circle .social-share-icon-qzone:hover{color:#fff;background-color:#f2c141}.social-share-button-square .social-share-icon-douban,.social-share-button-dark-square .social-share-icon-douban,.social-share-button-dark-circle .social-share-icon-douban,.social-share-button-circle .social-share-icon-douban{color:#319867;border-color:#319867}.social-share-button-square .social-share-icon-douban:hover,.social-share-button-dark-square .social-share-icon-douban:hover,.social-share-button-dark-circle .social-share-icon-douban:hover,.social-share-button-circle .social-share-icon-douban:hover{color:#fff;background-color:#319867}.social-share-button-square .social-share-icon-twitter,.social-share-button-dark-square .social-share-icon-twitter,.social-share-button-dark-circle .social-share-icon-twitter,.social-share-button-circle .social-share-icon-twitter{color:#00acee;border-color:#00acee}.social-share-button-square .social-share-icon-twitter:hover,.social-share-button-dark-square .social-share-icon-twitter:hover,.social-share-button-dark-circle .social-share-icon-twitter:hover,.social-share-button-circle .social-share-icon-twitter:hover{color:#fff;background-color:#00acee}.social-share-button-circle .social-share-icon{border-radius:50%}.social-share-button-dark-square .social-share-icon,.social-share-button-dark-circle .social-share-icon{color:#333;border-color:#333}.social-share-button-dark-square .social-share-icon:hover,.social-share-button-dark-circle .social-share-icon:hover{background-color:#333;color:#fff}.social-share-button-dark-circle .social-share-icon{border-radius:50%}
+
+/*# sourceMappingURL=social-share.min.css.map*/

@@ -17,7 +17,7 @@ export interface GenericProvideConfig extends ProvideConfig{
 
 export class Provider {
 
-    private readonly options: GenericProvideConfig
+    protected readonly options: GenericProvideConfig
     private readonly element: JQuery<Element>
 
     constructor(options){

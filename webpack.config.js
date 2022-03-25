@@ -4,14 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV !== 'production'
-
 module.exports = {
     entry: {
         'social-share': path.resolve(__dirname, 'src/index.ts'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
+        filename: isDev ? '[name].js' : '[name].min.js',
         library: 'SocialShare',
         libraryTarget: 'umd'
     },
@@ -27,7 +26,7 @@ module.exports = {
     },
     externals: {
         jquery: 'jQuery',
-        QRCode: 'QRCode'
+        qrcode: 'QRCode'
     },
     devtool: 'source-map',
     resolve: {
@@ -67,17 +66,19 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin(),
+        new webpack.ProgressPlugin(),
+        new MiniCssExtractPlugin({
+            filename: isDev ? '[name].css' : '[name].min.css',
+            chunkFilename: isDev ? '[id].css' : '[id].min.css',
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './samples/index.html'),
             filename: 'index.html',
             showErrors: true,
             inject: true
-        }),
-        new webpack.ProgressPlugin(),
-        new webpack.ProvidePlugin({
-            '$': 'jquery',
-            'jQuery': 'jquery'
-        }),
+        })
     ],
+    optimization: {
+        moduleIds: "named"
+    }
 };

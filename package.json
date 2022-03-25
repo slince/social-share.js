@@ -4,8 +4,8 @@
     "description": "Help to create social share button",
     "main": "dist/social-share.min.js",
     "scripts": {
-        "build": "./node_modules/.bin/webpack --config=webpack.config.js --display-error-details",
-        "dev": "./node_modules/.bin/webpack serve --config=webpack.config.js"
+        "build": "set NODE_ENV=production&& ./node_modules/.bin/webpack --config=webpack.config.js",
+        "dev": "set NODE_ENV=development&& ./node_modules/.bin/webpack serve --config=webpack.config.js"
     },
     "repository": {
         "type": "git",

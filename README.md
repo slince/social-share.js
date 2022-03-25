@@ -10,13 +10,14 @@ Social Share可以帮助在你的网站上轻松方便的创建分享到社交�
 
 ### 支持的网站：
 
-- [微博](http://www.weibbo.com)
-- [百度贴吧](http://tieba.baidu.com)
-- [QQ](http://www.qq.com)
-- [QQ空间](http://qzone.qq.com)
-- [豆瓣](http://www.douban.com)
-- [Facebook](http://www.facebook.com)
-- [Twitter](http://www.twitter.com)
+- [微博](https://www.weibbo.com)
+- [百度贴吧](https://tieba.baidu.com)
+- [微信](https://weixin.qq.com/)
+- [QQ](https://www.qq.com)
+- [QQ空间](https://qzone.qq.com)
+- [豆瓣](https://www.douban.com)
+- [Facebook](https://www.facebook.com)
+- [Twitter](https://www.twitter.com)
 
 ### 主题：
 
@@ -63,6 +64,9 @@ $ yarn add social-share-button.js
 下载本项目中dist目录下面的`social-share.min.js`和`social-share.min.css`文件，拷贝到项目中，通过script和link标签
 分别引入js文件和css文件即可。
 
+依赖项 
+- [jquery](https://github.com/jquery)
+- [qrcodejs](https://github.com/davidshimjs/qrcodejs)  你可以直接使用cdn地址 `<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>`
 
 ## Basic Usage
 
@@ -95,6 +99,7 @@ new SocialShare('.social-share-container', {
 
     // 单独定义微博的分享参数,其它的同
     weibo: {
+        sort: 1, // 排序参数，数字较小的展示在前面
         title: '网易',
         url: 'http://www.qq.com',
         summary: '网易门户',

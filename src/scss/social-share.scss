@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import "iconfont.css";
-
 //Facebook主色
 $facebookColor: #44619D;
 //微博主色
@@ -16,7 +14,8 @@ $doubanColor: #319867;
 $twitterColor: #00acee;
 //贴吧主色
 $tiebaColor: #3285ff;
-
+//微信颜色
+$wechatColor: #04be02;
 //暗色
 $darkColor: #333;
 
@@ -49,6 +48,9 @@ $darkColor: #333;
     }
     .social-share-icon-twitter{
         color: $twitterColor;
+    }
+    .social-share-icon-wechat{
+        color: $wechatColor;
     }
 }
 

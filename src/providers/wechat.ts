@@ -13,7 +13,12 @@ class Wechat extends Provider{
         super(options)
     }
 
+    getName() {
+        return 'wechat';
+    }
+
     onClick() {
+        console.log(this)
         new QRCode(this.getElement()[0], {
             text: this.options.url,
             width: this.options.width,

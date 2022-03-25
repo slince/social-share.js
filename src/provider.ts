@@ -2,7 +2,6 @@ import $ from 'jquery'
 import {openWin} from './util'
 
 export interface ProvideConfig{
-    enabled: boolean
     title?: string
     url?: string
     image?: string
@@ -10,9 +9,10 @@ export interface ProvideConfig{
 }
 
 export interface GenericProvideConfig extends ProvideConfig{
-    width: number
-    height: number
-    iconClass: string
+    enabled?: boolean
+    width?: number
+    height?: number
+    iconClass?: string
 }
 
 export class Provider {
@@ -22,6 +22,7 @@ export class Provider {
 
     constructor(options){
         this.options = Object.assign({
+            enabled: true,
             width: 575,
             height: 400,
             iconClass: `social-share-icon social-share-icon-${this.getName()}`
@@ -94,7 +95,7 @@ export class Provider {
      * @private
      */
     bindEvents(element: JQuery<Element>) {
-        element.on('click', this.onClick)
+        element.on('click', this.onClick.bind(this))
     }
 
     /**

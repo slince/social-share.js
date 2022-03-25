@@ -7,15 +7,15 @@ import {providers} from "./providers";
 type theme = 'square' | 'circle' | 'dark-square' | 'dark-circle'
 
 export interface SocialShareConfig extends ProvideConfig{
-    theme: string
-    weibo: boolean|GenericProvideConfig,
-    wechat: boolean|GenericProvideConfig,
-    qq: boolean|GenericProvideConfig,
-    qzone: boolean|GenericProvideConfig,
-    baidu: boolean|GenericProvideConfig,
-    douban: boolean|GenericProvideConfig,
-    facebook: boolean|GenericProvideConfig,
-    twitter: boolean|GenericProvideConfig
+    theme?: string
+    weibo?: boolean|GenericProvideConfig,
+    wechat?: boolean|GenericProvideConfig,
+    qq?: boolean|GenericProvideConfig,
+    qzone?: boolean|GenericProvideConfig,
+    baidu?: boolean|GenericProvideConfig,
+    douban?: boolean|GenericProvideConfig,
+    facebook?: boolean|GenericProvideConfig,
+    twitter?: boolean|GenericProvideConfig
 }
 
 export class SocialShare {
@@ -25,14 +25,14 @@ export class SocialShare {
     private readonly options: SocialShareConfig
     private readonly providers: {[key:string]: Provider}
 
-    constructor(element: Element, options: SocialShareConfig) {
-        this.container = $(element)
+    constructor(element: string|Element, options?: SocialShareConfig) {
+        this.container = typeof element === 'string' ? $(element) : $(element)
 
         //provider映射
         this.providerClassMap = providers
 
         //处理公共的options
-        this.options = this.resolveOptions(options)
+        this.options = this.resolveOptions(options || {})
         //处理容器节点的class
         this.resolveContainerClass()
 
@@ -86,6 +86,7 @@ export class SocialShare {
         options = Object.assign({
             theme: 'default',
             weibo: true,
+            wechat: true,
             qq: true,
             qzone:true,
             baidu: true,
@@ -129,11 +130,12 @@ export class SocialShare {
      * @returns {Object}
      * @private
      */
-    mergeProviderOptions(options: boolean|ProvideConfig){
+    mergeProviderOptions(options: boolean|GenericProvideConfig){
         //如果provider的配置为boolean，则使用默认参数
         if (typeof options === 'boolean') {
             options = {enabled: options}
         }
+
         if (!options.title) {
             options.title = this.options.title
         }

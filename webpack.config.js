@@ -6,13 +6,22 @@ const webpack = require('webpack');
 const isDev = process.env.NODE_ENV !== 'production'
 module.exports = {
     entry: {
-        'social-share': path.resolve(__dirname, 'src/index.ts'),
+        'social-share': {
+            import: path.resolve(__dirname, 'src/index.ts'),
+            library: {
+                name: 'SocialShare',
+                type: "umd",
+                export: 'SocialShare'
+            },
+        },
+        'demo': {
+            import: path.resolve(__dirname, 'samples/demo.ts')
+        }
     },
     output: {
+        clean: true,
         path: path.resolve(__dirname, 'dist'),
         filename: isDev ? '[name].js' : '[name].min.js',
-        library: 'SocialShare',
-        libraryTarget: 'umd'
     },
     mode: isDev ? 'development': 'production',
     devServer: {
@@ -44,7 +53,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(scss|sass)$/,
+                test: /\.(css|scss|sass)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",

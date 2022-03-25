@@ -1,8 +1,8 @@
 @font-face {
     font-family: "social-share-icon"; /* Project id 3277636 */
-    src: url('//at.alicdn.com/t/font_3277636_mzxrxlobomc.woff2?t=1648198338026') format('woff2'),
-    url('//at.alicdn.com/t/font_3277636_mzxrxlobomc.woff?t=1648198338026') format('woff'),
-    url('//at.alicdn.com/t/font_3277636_mzxrxlobomc.ttf?t=1648198338026') format('truetype');
+    src: url('//at.alicdn.com/t/font_3277636_750jlq4rpzu.woff2?t=1648202327063') format('woff2'),
+    url('//at.alicdn.com/t/font_3277636_750jlq4rpzu.woff?t=1648202327063') format('woff'),
+    url('//at.alicdn.com/t/font_3277636_750jlq4rpzu.ttf?t=1648202327063') format('truetype');
 }
 
 .social-share-icon {
@@ -13,7 +13,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.social-share-icon-share-tieba:before {
+.social-share-icon-tieba:before {
     content: "\e639";
 }
 
@@ -21,7 +21,7 @@
     content: "\e688";
 }
 
-.social-share-icon-QQ:before {
+.social-share-icon-qq:before {
     content: "\e882";
 }
 

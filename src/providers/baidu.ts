@@ -1,5 +1,4 @@
 
-
 import {Provider} from '../provider.js'
 
 class Baidu extends Provider {

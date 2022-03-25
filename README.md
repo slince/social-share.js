@@ -1,6 +1,6 @@
 <h1 align="center">Social Share Button</h1>
 
-[![Build Status](https://img.shields.io/travis/slince/social-share.js/master.svg?style=flat-square)](https://travis-ci.org/slince/social-share.js)
+[![Build Status](https://img.shields.io/github/workflow/status/slince/social-share.js.js/ci?style=flat-square)](https://github.com/slince/social-share.js.js/actions)
 [![npm version](https://img.shields.io/npm/v/social-share-button.js.svg?style=flat-square)](https://www.npmjs.com/package/social-share-button.js) 
 [![license](https://img.shields.io/npm/l/social-share-button.js.svg?style=flat-square)](https://www.npmjs.com/package/social-share-button.js)
 

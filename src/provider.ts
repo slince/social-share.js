@@ -1,6 +1,6 @@
+
 import $ from 'jquery'
 import {openWin} from './util'
-import {SocialShareConfig} from "./social-share";
 
 export interface ProvideConfig{
     title?: string

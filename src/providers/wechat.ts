@@ -1,3 +1,5 @@
+
+import $ from 'jquery'
 import {GenericProvideConfig, ProvideConfig, Provider} from "../provider"
 
 // @ts-ignore

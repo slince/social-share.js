@@ -1,8 +1,8 @@
 @font-face {
     font-family: "social-share-icon"; /* Project id 3277636 */
-    src: url('//at.alicdn.com/t/font_3277636_750jlq4rpzu.woff2?t=1648202327063') format('woff2'),
-    url('//at.alicdn.com/t/font_3277636_750jlq4rpzu.woff?t=1648202327063') format('woff'),
-    url('//at.alicdn.com/t/font_3277636_750jlq4rpzu.ttf?t=1648202327063') format('truetype');
+    src: url('https://at.alicdn.com/t/font_3277636_750jlq4rpzu.woff2?t=1648202327063') format('woff2'),
+    url('https://at.alicdn.com/t/font_3277636_750jlq4rpzu.woff?t=1648202327063') format('woff'),
+    url('https://at.alicdn.com/t/font_3277636_750jlq4rpzu.ttf?t=1648202327063') format('truetype');
 }
 
 .social-share-icon {
